@@ -60,7 +60,7 @@ app.delete('/comments/:id', (req, res) => {
         res.status(404).json({ error: 'Comment not found' });
     }
 });
-
+function generateId() { return Math.floor(Math.random() * 1000000); }
 // Start server
 app.listen(port, () => {
     console.log(`Server started on port ${port}`);
